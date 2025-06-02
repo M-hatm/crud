@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--font awesome-->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!--css bootstrap file-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--css main file-->
+    <link rel="stylesheet" href="css/style.css">
+    <title>crud system</title>
+</head>
+<body >
+    <div class="container w-75 m-auto shadow-lg p-5 my-4">
+        <div class="crud text-center text-capitalize fs-3 fw-bolder py-3">crud system</div>
+        
+        <div class="form-floating mb-3 ">
+        <input type="text" class="form-control" id="Pname" placeholder="Enter name product">
+       <label for="Pname">Product Name</label>
+</div>
+
+  <div class="form-floating mb-3">
+        <input type="number" class="form-control" id="Price" placeholder="Enter  price">
+       <label for="Price">Product Price</label>
+</div>
+<div class="form-floating mb-3">
+        <input list="categories" type="text" class="form-control" id="category" placeholder="Select Category">
+       <label for="category">Product Category</label>
+<datalist id="categories">
+    <option value="tv">
+    <option value="mobile">
+    <option value="Accessories">
+    <option value="tablet">
+</datalist>
+    </div>
+<div class="form-floating mb-3">
+        <input type="file" class="form-control py-5" id="image" placeholder="select file">
+       <label for="image">Product file</label>
+</div>
+<div class="form-floating">
+  <textarea class="form-control" placeholder="Leave a comment here" id="desc" style="height: 100px"></textarea>
+  <label for="desc">Description</label>
+</div>
+
+<button   class="btn bg-success text-white p-3 my-3 "  id="add">Add Product</button>
+<button class="btn bg-danger text-white p-3 m-3" id="reset">Reset</button>
+    </div>
+
+<div class="container ">
+    <div class="row" id="rowData">
+        
+    </div>
+</div>
+
+
+
+
+
+
+<!--js bootstrap file-->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!--js main file -->
+    <script src="js/main.js"></script>
+</body>
+</html>
