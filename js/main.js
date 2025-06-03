@@ -104,8 +104,31 @@ function updateProduct(index){
    
 }
 
+var search=document.getElementById("search");
 
+function searchProduct(){
+    var cartona; 
+    var searchValue=search.value;
+    for(var i=0 ; i<productList.length; i++){
+        if(productList[i].name.toLowerCase().includes(searchValue.toLowerCase())==true){
+          
+      cartona+=`
+        <div class="col-md-4 col-sm-6">
+            <div class="img w-100">
+                <img class="w-100" src="${productList[i].image}" alt="">
+            </div>
+<div class="name py-2 fw-bold"> productname: <span class="text-danger fw-bold" >${productList[i].name} </span></div>
+<div class="price py-2 fw-bold"> productPrice: <span class="text-danger fw-bold">${productList[i].price}</span></div>
+<div class="category py-2 fw-bold"> productCategory: <span class="text-danger fw-bold">${productList[i].category}</span></div>
+<div class="Description py-2 fw-bold"> productDescription: <span class="text-danger fw-bold">${productList[i].desc}</span></div>
 
+ <button onclick="deleteProduct(${i})" class="btn btn-outline-danger my-3">Delete</button>
+<button onclick="updateProduct(${i})" class="btn btn-outline-info">Update</button>
+        </div>
+        `       
+}}
+document.getElementById("rowData").innerHTML=cartona;
+}
 
 
 
